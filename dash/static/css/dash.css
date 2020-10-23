@@ -1,0 +1,18 @@
+.vue-grid-layout {
+  background-color: none;
+}
+.vue-grid-item {
+  background-color: #2f3136;
+}
+.vue-grid-item .text {
+    font-size: 24px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}

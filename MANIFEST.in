@@ -1,0 +1,4 @@
+include README.md
+recursive-include dash/templates *
+recursive-include dash/translations *
+recursive-include dash/static *

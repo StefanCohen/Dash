@@ -1,0 +1,36 @@
+
+ <div id="app">
+  <grid-layout
+            :layout.sync="layout"
+            :col-num="4"
+            :responsive="true"
+            :row-height="90"
+            :is-draggable="true"
+            :is-resizable="true"
+            :is-mirrored="false"
+            :vertical-compact="true"
+            @layout-updated="layoutUpdatedEvent"
+            @layout-created="layoutCreatedEvent"
+            :margin="[3, 3]"
+            :breakpoints="{ gaga: 1300,schurz: 1200, md: 996, pups: 768, xs: 480, xxs: 0}"
+            :cols="{ gaga:10, schurz: 6, md: 10, pups: 6, xs: 4, xxs: 3 }"
+            :use-css-transforms="true"
+    >
+
+        <grid-item v-for="item in layout"
+                   :x="item.x"
+                   :y="item.y"
+                   :w="item.w"
+                   :h="item.h"
+                   :i="item.i"
+                   @resize="resizeEvent">
+                   <div v-html="item.c">
+                   </div>
+            [[item.i]]
+        </grid-item>
+    </grid-layout>
+  <button id="addnew" ref="addNewButton">New (+)</button>
+</div>
+
+
+
